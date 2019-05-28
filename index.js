@@ -59,7 +59,26 @@ function updateState(price, tax, tip) {
 }
 
 function render() {
-  $('.customer-charges').html(`<section id="waitstaff-section">
+  $('.container').html(`<h1>Waitstaff Calculator</h1>
+
+  <section id="waitstaff-section">
+    <h2>Enter the Meal Details</h2>
+    <form id="meal-details">
+      <p class="base-meal-price">Base Meal Price: $
+        <input type="number" step="0.01" name="amount" id="meal-amount" placeholder="e.g. 9.99">
+      </p>
+      <p class="form-tax-rate">Tax Rate: %
+        <input type="number" step="0.01" name="rate" id="meal-tax-rate" placeholder="e.g. 1.5">
+      </p>
+      <p class="form-tip-percentage">Tip Percentage: %
+        <input type="number" step="0.01" name="percentage" id="meal-percentage" placeholder="e.g. 10, 15, 20">
+      </p>
+      <button type="submit" class="meal-submit">Submit</button>
+      <button type="reset" value="Cancel">Cancel</button>
+    </form>
+  </section>
+  
+  <section id="waitstaff-section">
   <h2>Customer Charges</h2>
   <p class="subtotal-charges">Subtotal: $${state.subTotal} </p>
   <p class="tip-charges">Tip: $${state.tip} </p>
