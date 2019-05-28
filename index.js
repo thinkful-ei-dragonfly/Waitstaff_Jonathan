@@ -15,7 +15,7 @@ function handleSubmit() {
     e.preventDefault();
     console.log('submit clicked')
     const mealPrice = parseFloat($('#meal-amount').val());
-    const taxRate = parseFloat($('#meal-tax-rate').val());
+    let taxRate = parseFloat($('#meal-tax-rate').val());
     let tipPercent = parseFloat($('#meal-percentage').val());
     $('#meal-amount').val('');
     $('#meal-tax-rate').val('');
@@ -23,11 +23,13 @@ function handleSubmit() {
     if (!mealPrice) {
       throw "Base Meal Price must be a number!"
     }
-    else if (!taxRate) {
-      throw "Tax Rate must be a number!"
+    else { 
+    if (!taxRate) {
+      taxRate = 0;
     }
-    else if (!tipPercent) {
+    if (!tipPercent) {
       tipPercent = 0;
+    }
       updateState(mealPrice, taxRate, tipPercent);
       render();
     }
