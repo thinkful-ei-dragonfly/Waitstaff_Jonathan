@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Waitstaff Calculator</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
-  
+  <div class="container">
+    <h1>Waitstaff Calculator</h1>
+
+    <section id="waitstaff-section">
+      <h2>Enter the Meal Details</h2>
+      <form id="meal-details">
+        <p class="base-meal-price">Base Meal Price: $
+          <input type="number" step="0.01" name="amount" id="meal-amount" placeholder="e.g. 9.99">
+        </p>
+        <p class="form-tax-rate">Tax Rate: %
+          <input type="number" step="0.01" name="rate" id="meal-tax-rate" placeholder="e.g. 1.5">
+        </p>
+        <p class="form-tip-percentage">Tip Percentage: %
+          <input type="number" step="0.01" name="percentage" id="meal-percentage" placeholder="e.g. 10, 15, 20">
+        </p>
+        <button type="submit" class="meal-submit">Submit</button>
+        <button type="reset" value="Cancel">Cancel</button>
+      </form>
+    </section>
+    <div class="customer-charges">
+
+    </div>
+    <div class="reset-button">
+    <button type="button">Reset</button>
+    <div>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
