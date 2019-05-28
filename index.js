@@ -90,7 +90,10 @@ function render() {
   <p class="tip-total"> Tip Total: $${state.tipTotal} </p>
   <p class="meal-count">Meal count: ${state.mealCount} </p>
   <p class="average-tip-meal">Average Tip Per Meal: $${state.averageTip} </p>
-</section>`);
+</section>
+<div class="reset-button">
+    <button type="button">Reset</button>
+    <div>`);
 }
 
 function handleWaitstaff() {
